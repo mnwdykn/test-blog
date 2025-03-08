@@ -11,7 +11,6 @@ import { siteTitle } from "../../components/Layout";
 //SSGの場合
 export async function getStaticProps() {
   const allPostsData = getPostsData();
-  console.log(allPostsData);
 
   return {
     props: {
@@ -37,11 +36,11 @@ export default function Home({ allPostsData }) {
           <title>{siteTitle}</title>
         </Head>
         <section className={utilStyle.headingMd}>
-          <p>こんにちは、みのです、Devブランチです</p>
+          <p>こんにちは、Mです。</p>
         </section>
 
         <section>
-          <h2>エンジニアのブログ、Devブランチです</h2>
+          <h2>とあるエンジニアのブログ</h2>
           <div className={styles.grid}>
             {allPostsData.map(({ id, title, date, thumbnail }) => (
               <article key={id}>
