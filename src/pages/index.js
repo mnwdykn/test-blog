@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Layout from "../../components/Layout";
@@ -39,7 +38,6 @@ export default function Home({ allPostsData }) {
         </section>
 
         <section>
-          <h2>とあるエンジニアのブログ</h2>
           <div className={styles.grid}>
             {allPostsData.map(({ id, title, date, thumbnail }) => (
               <article key={id}>

@@ -59,3 +59,27 @@
   color: black;
   font-weight: 550;
 }
+
+.postContent {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.postContent h2 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  color: #222;
+}
+
+.postContent p {
+  margin-bottom: 1rem;
+}
+
+.postContent a {
+  color: #0070f3;
+  text-decoration: underline;
+}
