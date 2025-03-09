@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Layout from "../../components/Layout";
@@ -8,7 +7,7 @@ import utilStyle from "../styles/utils.module.css";
 import { getPostsData } from "../../lib/post";
 import { siteTitle } from "../../components/Layout";
 
-//SSGの場合
+//静的サイト生成（SSG）
 export async function getStaticProps() {
   const allPostsData = getPostsData();
 
