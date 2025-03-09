@@ -25,9 +25,9 @@ export default function Layout({ children, home }) {
           <>
             <img
               src="/images/profile.png"
-              className={`${utilStyles.borderCircle}`}
+              className={`${utilStyles.borderCircle} ${styles.headerHomeImage}`}
             />
-            <h1 className={utilStyles.headingXl}>{name}</h1>
+            <h1 className={utilStyles.headingMd}>{name}</h1>
           </>
         )}
       </header>
