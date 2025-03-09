@@ -1,7 +1,7 @@
 ---
-title: "記事4"
-date: "2025/03/08"
-thumbnail: "/images/soccer.png"
+title: "未定"
+date: "2025/03/"
+thumbnail: "/images/preparation.png"
 ---
 
-記事 4 の本文
+本文
