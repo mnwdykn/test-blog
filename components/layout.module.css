@@ -3,7 +3,7 @@
 }
 
 .header {
-  background-color: #f5f5f5; /* 薄いグレーで背景を強調 */
+  background: white; /* ヘッダーを白に */
   border-bottom: 2px solid #ddd;
   text-align: center;
   margin-bottom: 2rem; /* 下に余白をつける */
