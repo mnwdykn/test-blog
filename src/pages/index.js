@@ -33,9 +33,6 @@ export default function Home({ allPostsData }) {
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <section className={utilStyle.headingMd}>
-          <p>こんにちは、みみみです。</p>
-        </section>
 
         <section>
           <div className={styles.articleList}>
