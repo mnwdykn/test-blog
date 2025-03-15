@@ -12,15 +12,6 @@
   align-items: center;
 }
 
-.thumbnailImage {
-  width: 950px;
-  height: 400px;
-  margin-bottom: 20px;
-  box-shadow: 4px 5px 12px black;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
 .thumbnailImage:hover {
   transform: translate(4px, 5px);
   box-shadow: none;
@@ -36,14 +27,12 @@
 .articleCard {
   display: flex;
   align-items: center;
-  background: white; /* 背景を白に */
-  border: 1px solid #e0e0e0; /* 薄いボーダーを追加 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 軽い影 */
+  background: white;
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
+  overflow: hidden; /* はみ出し防止 */
 }
 
 .articleCard:hover {
@@ -53,14 +42,13 @@
 .thumbnail {
   width: 120px;
   height: 90px;
-  object-fit: cover; /* 画像の比率を保ちつつ枠内に収める */
+  object-fit: contain; /* 画像全体を枠内に収める（トリミングなし） */
   border-radius: 6px;
   margin-right: 15px;
-  overflow: hidden;
 }
 
 .articleInfo {
-  flex: 1;
+  flex: 1; /* タイトルや日付が適切に配置されるようにする */
 }
 
 .articleTitle {
