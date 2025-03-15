@@ -1,18 +1,47 @@
 .container {
-  max-width: 1244px;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  width: 100%;
 }
 
 .header {
   background-color: #f5f5f5; /* 薄いグレーで背景を強調 */
-  padding: 1.5rem;
   border-bottom: 2px solid #ddd;
   text-align: center;
   margin-bottom: 2rem; /* 下に余白をつける */
 }
 
+/* プロフィール画像 */
 .headerHomeImage {
-  width: 8rem;
-  height: 8rem;
+  width: 6rem;
+  height: 6rem;
+  margin-top: 1rem;
+}
+
+/* ホームへ戻るボタン */
+.backToHome {
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.backToHome a {
+  display: inline-flex;
+  align-items: center;
+  background-color: #0070f3; /* ブルー */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.backToHome a:hover {
+  background-color: #005bb5; /* 濃いブルー */
+  transform: translateY(-2px); /* 浮き上がる */
+}
+
+.backToHome a::before {
+  content: "← ";
+  margin-right: 5px;
 }
