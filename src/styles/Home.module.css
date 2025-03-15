@@ -26,11 +26,50 @@
   box-shadow: none;
 }
 
-.grid {
-  display: grid;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  gap: 40px;
+.articleList {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.articleCard {
+  display: flex;
+  align-items: center;
+  background: white; /* 背景を白に */
+  border: 1px solid #e0e0e0; /* 薄いボーダーを追加 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* 軽い影 */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.articleCard:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail {
+  width: 120px;
+  height: 90px;
+  object-fit: cover; /* 画像の比率を保ちつつ枠内に収める */
+  border-radius: 6px;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.articleInfo {
+  flex: 1;
+}
+
+.articleTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.articleDate {
+  font-size: 0.9rem;
+  color: #777;
 }

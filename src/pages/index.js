@@ -38,17 +38,19 @@ export default function Home({ allPostsData }) {
         </section>
 
         <section>
-          <div className={styles.grid}>
+          <div className={styles.articleList}>
             {allPostsData.map(({ id, title, date, thumbnail }) => (
-              <article key={id}>
+              <article key={id} className={styles.articleCard}>
                 <Link href={`/posts/${id}`}>
-                  <img src={`${thumbnail}`} className={styles.thumbnailImage} />
+                  <img src={`${thumbnail}`} className={styles.thumbnail} />
                 </Link>
-                <Link href={`/posts/${id}`} className={utilStyle.boldText}>
-                  {title}
-                </Link>
-                <br />
-                <small className={utilStyle.lightText}>{date}</small>
+                <div className={styles.articleInfo}>
+                  <Link href={`/posts/${id}`} className={styles.articleTitle}>
+                    {title}
+                  </Link>
+                  <br />
+                  <small className={styles.articleDate}>{date}</small>
+                </div>
               </article>
             ))}
           </div>

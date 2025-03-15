@@ -4,7 +4,7 @@ import utilStyles from "../src/styles/utils.module.css";
 import Link from "next/link";
 
 const name = "みみみくん";
-export const siteTitle = "エンジニアになりたいなんちゃってエンジニアのブログ";
+export const siteTitle = "フロントエンドを学ぶインフラエンジニア";
 
 export default function Layout({ children, home }) {
   return (
@@ -19,7 +19,7 @@ export default function Layout({ children, home }) {
               src="/images/profile.png"
               className={`${utilStyles.borderCircle} ${styles.headerHomeImage}`}
             />
-            <h1 className={utilStyles.headingXl}>{name}</h1>
+            <h1 className={utilStyles.headingMd}>{name}</h1>
           </>
         ) : (
           <>
