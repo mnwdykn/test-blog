@@ -26,6 +26,7 @@ export async function getStaticProps() {
 //   };
 // }
 
+//トップページ
 export default function Home({ allPostsData }) {
   return (
     <>
