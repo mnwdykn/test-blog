@@ -43,11 +43,12 @@ export default function Home({ allPostsData }) {
                   <img src={`${thumbnail}`} className={styles.thumbnail} />
                 </Link>
                 <div className={styles.articleInfo}>
+                  <small className={styles.articleDate}>{date}</small>
+                  <br />
                   <Link href={`/posts/${id}`} className={styles.articleTitle}>
                     {title}
                   </Link>
                   <br />
-                  <small className={styles.articleDate}>{date}</small>
                 </div>
               </article>
             ))}
