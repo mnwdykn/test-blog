@@ -24,6 +24,7 @@ export default async function handler(req, res) {
     subject: `お問い合わせ: ${name} さん`,
     text: `【お問い合わせがありました】
 
+-----
 名前: ${name}
 メールアドレス: ${email}
 
