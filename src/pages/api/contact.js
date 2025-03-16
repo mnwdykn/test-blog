@@ -7,9 +7,6 @@ export default async function handler(req, res) {
 
   const { name, email, message } = req.body;
 
-  console.log("EMAIL_USER:", process.env.EMAIL_USER);
-  console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "EXISTS" : "MISSING");
-
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -21,15 +18,15 @@ export default async function handler(req, res) {
   const mailOptions = {
     from: process.env.EMAIL_USER, // 送信元はGmailの制約上、SMTPアカウントと同じにする
     to: process.env.EMAIL_USER, // 受信先
-    subject: `お問い合わせ: ${name} さん`,
-    text: `【お問い合わせがありました】
-
------
-名前: ${name}
-メールアドレス: ${email}
-
-メッセージ:
-${message}`,
+    subject: `お問い合わせ：${name} さん`,
+    text: `【お問い合わせがありました】\n
+    ---------------------------------\n
+    ■ 名前：${name}\n
+    ■ メールアドレス：${email}\n
+    ---------------------------------\n
+    ■ メッセージ：\n
+    ${message}\n
+    ---------------------------------`,
   };
 
   try {

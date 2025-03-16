@@ -26,7 +26,7 @@ export default function Contact() {
     });
 
     if (response.ok) {
-      setStatus("メールが送信されました！");
+      setStatus("問い合わせが送信されました！");
       setFormData({ name: "", email: "", message: "" }); // 入力をリセット
     } else {
       setStatus("送信に失敗しました。");
