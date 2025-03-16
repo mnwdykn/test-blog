@@ -14,24 +14,15 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         <div className={styles.headerContent}>
-          {/* 記事一覧のリンク（左下） */}
-          <nav className={styles.headerLeft}>
+          <h1 className={styles.headerTitle}>{name}</h1>
+          <nav className={styles.navLinks}>
             <Link href="/" className={styles.navLink}>
               記事一覧
             </Link>
             <Link href="/contact" className={styles.navLink}>
-              お問い合わせ
+              問い合わせ
             </Link>
           </nav>
-
-          {/* プロフィール画像とタイトル（中央） */}
-          <div className={styles.headerCenter}>
-            <img
-              src="/images/profile.png"
-              className={`${utilStyles.borderCircle} ${styles.headerHomeImage}`}
-            />
-            <h1 className={utilStyles.headingMd}>{name}</h1>
-          </div>
         </div>
       </header>
       <main>{children}</main>
