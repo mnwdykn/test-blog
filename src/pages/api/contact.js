@@ -18,7 +18,7 @@ export default async function handler(req, res) {
   const mailOptions = {
     from: process.env.EMAIL_USER, // 送信元はGmailの制約上、SMTPアカウントと同じにする
     to: process.env.EMAIL_USER, // 受信先
-    subject: `お問い合わせ: ${name} さんより`,
+    subject: `お問い合わせ: ${name} さん`,
     text: `【お問い合わせがありました】
 
 名前: ${name}
