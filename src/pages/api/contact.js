@@ -7,6 +7,9 @@ export default async function handler(req, res) {
 
   const { name, email, message } = req.body;
 
+  console.log("EMAIL_USER:", process.env.EMAIL_USER);
+  console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "EXISTS" : "MISSING");
+
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
